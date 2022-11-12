@@ -4,8 +4,8 @@ import {
   GlobeAltIcon,
   Bars3Icon,
   UserCircleIcon,
-  UsersIcon,
 } from "@heroicons/react/24/solid";
+import { logo } from "../utils/ImgSources";
 
 type Props = {};
 
@@ -15,7 +15,7 @@ const Header = ({}: Props) => {
       {/* left */}
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
         <Image
-          src="https://links.papareact.com/qd3"
+          src={logo}
           style={{ objectFit: "contain", objectPosition: "left" }}
           fill
           alt="airbnb logo"
@@ -29,17 +29,18 @@ const Header = ({}: Props) => {
           placeholder="Start your search"
           className="border-none bg-transparent px-2 outline-none flex-1 text-sm text-gray-600 placeholder-gray-400"
         />
-        <MagnifyingGlassIcon className="hidden h-8 bg-transparent text-gray-500  rounded-full p-0 cursor-pointer rotate-[135deg] sm:inline-flex sm:text-white sm:bg-red-500 sm:p-2" />
+        <MagnifyingGlassIcon className="hidden h-8 bg-transparent text-gray-500  rounded-full p-0 cursor-pointer sm:inline-flex sm:text-white sm:bg-red-500 sm:p-2" />
       </div>
+
       {/* right */}
       <div className="flex items-center justify-end gap-4">
-        <p className="hidden md:inline-flex text-center cursor-pointer">
+        <p className="hidden md:inline-flex text-center cursor-pointer py-2 px-3 rounded-full hover:bg-gray-100 ">
           Become a host
         </p>
-        <GlobeAltIcon className="h-6 cursor-pointer" />
-        <div className="flex items-center gap-2 border-2 p-2 rounded-full">
-          <Bars3Icon className="h-6" />
-          <UserCircleIcon className="h-6" />
+        <GlobeAltIcon className="h-10 cursor-pointer p-2 text-gray-500 rounded-full hover:bg-gray-100" />
+        <div className="flex items-center gap-2 border-2 p-2 rounded-full hover:shadow-md cursor-pointer">
+          <Bars3Icon className="h-6 text-gray-500" />
+          <UserCircleIcon className="h-6 text-gray-500" />
         </div>
       </div>
     </header>
