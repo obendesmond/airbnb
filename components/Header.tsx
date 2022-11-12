@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import {
+  MagnifyingGlassIcon,
+  GlobeAltIcon,
+  Bars3Icon,
+  UserCircleIcon,
+  UsersIcon,
+} from "@heroicons/react/24/solid";
 
 type Props = {};
 
@@ -21,12 +27,21 @@ const Header = ({}: Props) => {
         <input
           type="text"
           placeholder="Start your search"
-          className="border-none bg-transparent px-2 outline-none flex-1 text-sm text-gray-600"
+          className="border-none bg-transparent px-2 outline-none flex-1 text-sm text-gray-600 placeholder-gray-400"
         />
         <MagnifyingGlassIcon className="hidden h-8 bg-transparent text-gray-500  rounded-full p-0 cursor-pointer rotate-[135deg] sm:inline-flex sm:text-white sm:bg-red-500 sm:p-2" />
       </div>
       {/* right */}
-      <div>{/* <p>Something3</p> */}</div>
+      <div className="flex items-center justify-end gap-4">
+        <p className="hidden md:inline-flex text-center cursor-pointer">
+          Become a host
+        </p>
+        <GlobeAltIcon className="h-6 cursor-pointer" />
+        <div className="flex items-center gap-2 border-2 p-2 rounded-full">
+          <Bars3Icon className="h-6" />
+          <UserCircleIcon className="h-6" />
+        </div>
+      </div>
     </header>
   );
 };
