@@ -15,7 +15,7 @@ function Banner({}: Props) {
       />
       <div className="absolute w-full top-1/2 text-center">
         <p className="text-sm sm:text-xl">Not sure where to go? Perfect.</p>
-        <button className="text-purple-500 px-6 py-3 font-bold my-3 bg-white shadow-md rounded-full md:px-10 md:py-4 hover:shadow-xl active:scale-90 transition duration-150">
+        <button className="text-purple-500 px-6 outline-none py-3 font-bold my-3 bg-white shadow-md rounded-full md:px-10 md:py-4 hover:shadow-xl active:scale-90 transition duration-150">
           I'm flexible
         </button>
       </div>
